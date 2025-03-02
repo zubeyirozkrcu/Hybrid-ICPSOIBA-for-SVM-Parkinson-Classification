@@ -1,0 +1,35 @@
+This repository contains an SVM model optimized with the Improved Chaotic Particle Swarm Optimization Improved Bat Algorithm (ICPSOIBA). 
+The model is designed for early diagnosis of Parkinson's disease based on audio features.
+
+1) Requirements
+	MATLAB
+	Statistics and Machine Learning Toolbox
+	Global Optimization Toolbox
+	Bioinformatics Toolbox
+	
+2) Data Set
+	Source: UCI Machine Learning Repository (The dataset can be downloaded from https://archive.ics.uci.edu/dataset/174/parkinsons)
+	Features: 22 biomechanical sound features 
+	Number of Samples: 195 (23 patients, 8 healthy)
+	
+3) Usage
+	Make sure that ICPSOIBASVM.m, optimizeSVMParkinsonHyperparams.m and parkinsondisease.csv are in the same directory.
+	Run the master file (ICPSOIBASVM.m) with ICPSOIBASVM.
+	
+	For which metric you want to run the algorithm, that should be written in the return value of the optimizeSVMParkinsonHyperparams 
+	function in the optimizeSVMParkinsonHyperparams.m file. accuracyRate for accuracy, sensitivityRate for precision, precisionRate for precision, 
+	f1Score for f1 Score and specificityRate for specificity.
+	
+	The number of populations was run separately for each evaluation metric as 5,10,15,15,20,25,30,35,40,45 and 50. 
+	You can change the number of populations by changing the value of the nPop parameter in the ICPSOIBASVM.m file.
+	
+4) Outputs
+	It outputs the best classification result obtained in each iteration with a total iteration number of 100.
+
+5) Code Structure
+	ICPSOIBASVM.m 
+		Main script: Manages the hybrid optimization of ICPSO and IBA.
+	optimizeSVMParkinsonHyperparams.m
+		It trains the SVM model and measures performance with 5-fold cross-validation.
+	parkinsondisease.csv
+		Parkinson's dataset.
