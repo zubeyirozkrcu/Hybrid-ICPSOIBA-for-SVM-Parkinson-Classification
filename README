@@ -1,3 +1,5 @@
+A Hybrid Optimization Approach for Enhancing SVM-Based Parkinson’s Disease Classification Using ICPSOIBA (Mahmut Durgun and Zübeyir Şükrü Özkorucu)
+
 This repository contains an SVM model optimized with the Improved Chaotic Particle Swarm Optimization Improved Bat Algorithm (ICPSOIBA). 
 The model is designed for early diagnosis of Parkinson's disease based on audio features.
 
